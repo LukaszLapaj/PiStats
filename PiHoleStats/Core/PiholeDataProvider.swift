@@ -34,7 +34,7 @@ class PiholeDataProvider: ObservableObject {
     
      var canDisplayEnableDisableButton: Bool {
         return !piholes.allSatisfy {
-            return $0.apiToken.isEmpty == true
+            return $0.address.isEmpty != false
         }
     }
     
